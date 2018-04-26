@@ -14,7 +14,7 @@ namespace FodyExample
         }
 
         [Time]
-        private static void RunTimedTask(int until = int.MaxValue >> 2)
+        private static void RunTimedTask(int until = 100000000)
         {
             for (int i = 0; i < until; ++i) { }
         }
