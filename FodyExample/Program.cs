@@ -1,5 +1,6 @@
 ﻿using System;
 using Anotar.NLog;
+using MethodTimer;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
@@ -19,7 +20,13 @@ namespace FodyExample
         private static void MethodTimer()
         {
             Console.WriteLine("Testing Fody.MethodTimer");
-            Timed.RunTimedTask();
+            RunTimedTask();
+        }
+
+        [Time]
+        private static void RunTimedTask(int until = int.MaxValue >> 2)
+        {
+            for (int i = 0; i < until; ++i) { }
         }
 
         private static void Anotar()
