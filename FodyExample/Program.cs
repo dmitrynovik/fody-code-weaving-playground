@@ -1,12 +1,19 @@
-﻿using System;
+﻿using MethodTimer;
 
 namespace FodyExample
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RunTimedTask();
+            return 0;
+        }
+
+        [Time]
+        private static void RunTimedTask(int until = int.MaxValue)
+        {
+            for (int i = 0; i < until; ++i) { }
         }
     }
 }

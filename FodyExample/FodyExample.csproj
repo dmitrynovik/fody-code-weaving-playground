@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="3.0.3" />
+    <PackageReference Include="MethodTimer.Fody" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>
